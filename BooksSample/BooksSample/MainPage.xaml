@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="BooksSample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BooksSample"
+    xmlns:models="using:BooksSample.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <models:Book x:Key="myBook" Title="A Cool Book" Publisher="Self" />
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="button1" Content="Click Me!" Click="OnButtonClick" />
+        <Button Grid.Row="1" x:Name="button2">
+            <StackPanel>
+                <Ellipse Width="100" Height="40" Fill="Red" />
+                <Rectangle Width="100" Height="30" Fill="Green" />
+            </StackPanel>
+
+        </Button>
+        <ListBox Grid.Column="1" Grid.RowSpan="2" x:Name="list1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Title}" />
+                        <TextBlock Text="{Binding Publisher}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <FlipView Grid.Column="2" Grid.RowSpan="2" x:Name="flip1" />
+        <ListBox Grid.Column="3" Grid.RowSpan="2">
+            <ListBox.Items>
+                <Ellipse Width="100" Height="40" Fill="Red" />
+                <Rectangle Width="100" Height="30" Fill="Green" />
+            </ListBox.Items>
+        </ListBox>
+        
+        <!-- StaticResource Markup Extension-->
+        <Button Grid.Row="2" Content="{StaticResource ResourceKey=myBook}">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Title}" />
+                        <TextBlock Text="{Binding Publisher}" />
+                    </StackPanel>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+    </Grid>
+</Page>
