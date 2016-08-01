@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="XamlIntro.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XamlIntro"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button x:Name="button1" Width="200" Height="520">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Offset="0" Color="White" />
+                    <GradientStop Offset="0.5" Color="Orange" />
+                    <GradientStop Offset="1" Color="Red" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <ComboBox>
+                <ComboBox.Items>
+                    <TextBlock Text="One" />
+                    <TextBlock Text="Two" />
+                    <TextBlock Text="Three" />
+                </ComboBox.Items>
+            </ComboBox>
+
+        </Button>
+        
+    </Grid>
+</Page>
