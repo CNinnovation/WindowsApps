@@ -1,19 +1,13 @@
 ﻿using BooksDataBindingSample.Models;
 using BooksDataBindingSample.Services;
 using BooksSample.Models;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.UI.Popups;
 
 namespace BooksDataBindingSample.ViewModels
 {
     public class MainPageViewModel : BindableBase
     {
-        private Book _theBook;
         private ObservableCollection<Book> _books;
         private readonly IMessageService _messageService;
 
@@ -21,7 +15,6 @@ namespace BooksDataBindingSample.ViewModels
         {
             _messageService = messageService;
 
-            _theBook = new BooksService().GetTheBook();
             _books = new ObservableCollection<Book>(new BooksService().GetBooks());
         }
 
@@ -35,7 +28,7 @@ namespace BooksDataBindingSample.ViewModels
 
         public void OnChangeBook()
         {
-            _theBook.Title = "Professional C# 7";
+            SelectedBook.Title = SelectedBook.Title + "..";
         }
 
         public void OnAddBook()

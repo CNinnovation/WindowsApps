@@ -95,18 +95,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BookTemplateSelector.cs" />
+    <Compile Include="Extensions\BookTemplateSelector.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\BindableBase.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\BooksService.cs" />
-    <Compile Include="ObjectToObjectConverter.cs" />
+    <Compile Include="Converters\ObjectToObjectConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IMessageService.cs" />
     <Compile Include="Services\UWPMessageService.cs" />
-    <Compile Include="StringArrayToStringConverter.cs" />
+    <Compile Include="Converters\StringArrayToStringConverter.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
