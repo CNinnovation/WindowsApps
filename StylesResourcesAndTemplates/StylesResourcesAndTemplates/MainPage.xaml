@@ -14,18 +14,7 @@
         </Grid.ColumnDefinitions>
         <Grid.Resources>
           
-            <Style TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
-                <Setter Property="Background">
-                    <Setter.Value>
-                        <LinearGradientBrush>
-                            <GradientStop Offset="0" Color="Yellow" />
-                            <GradientStop Offset="0.5" Color="Orange" />
-                            <GradientStop Offset="1" Color="Red" />
-                        </LinearGradientBrush>
-                    </Setter.Value>
-                </Setter>
-                <Setter Property="Margin" Value="8" />
-            </Style>
+           
             <Style TargetType="Button" x:Key="BlueButtonStyle" BasedOn="{StaticResource DefaultButtonStyle}">
                 <Setter Property="Background" Value="{StaticResource BlueBrush}" />
                 <Setter Property="Margin" Value="8" />

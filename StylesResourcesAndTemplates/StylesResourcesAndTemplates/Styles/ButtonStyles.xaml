@@ -9,6 +9,19 @@
         <Setter Property="Height" Value="90" />
     </Style>
 
+    <Style TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Offset="0" Color="Yellow" />
+                    <GradientStop Offset="0.5" Color="Orange" />
+                    <GradientStop Offset="1" Color="Red" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="8" />
+    </Style>
+
     <LinearGradientBrush x:Key="BlueBrush" StartPoint="0.5,0" EndPoint="0.5,1">
         <GradientStop Offset="0" Color="Yellow" />
         <GradientStop Offset="0.5" Color="LightBlue" />
